@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <title>Alberto Caparrós</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>
+    // Document ready shorthand statement
+    $(function() {
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+    
+    return false;
+  });
+
+
+    });
+
+$(document).ready(function(){
+
+    $('#boton-web').mouseenter(function(){
+        div = $('div.inicial');
+        divMostrar = $("div.web");
+
+        div.hide();
+        divMostrar.show(50);
+    }).mouseleave(function(){
+        div.show(50);
+        divMostrar.hide();
+    });
+    
+    $('#boton-frameworks').mouseenter(function(){
+        div = $('div.inicial');
+        divMostrar = $("div.frameworks");
+
+        div.hide();
+        divMostrar.show(50);
+    }).mouseleave(function(){
+        div.show(50);
+        divMostrar.hide();
+    });
+
+});
+</script>
+
+</head>
+
+<body>
+    <div id="seccion1" class="pimg1">
+        <a href="#seccion2"><div class="botonBajar"></div></a>
+        <div class="ptext" id="showcase">
+            <span class="border">
+                Alberto Caparrós
+            </span>
+            <br>
+            <br>
+            <span class="border2">
+                Desarrollo de software
+            </span>
+        </div>
+    </div>
+
+    <section id="seccion2" class="section section-light">
+        <a href="#seccion3"><div class="botonBajar"></div></a>
+        <a href="#seccion1"><div class="botonSubir"></div></a> 
+
+        <h2>Habilidades</h2>
+        <div class="row">
+            <div class="column">
+                <div id="boton-web">
+                    <h3>Tecnologias Web</h3>
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Angular</li>
+                        <li>JSP</li>
+                    </ul>
+                </div>
+                <div id="boton-frameworks">
+                    <h3>Frameworks y herramientas</h3>
+                    <ul>
+                        <li>jQuery</li>
+                        <li>Ionic</li>
+                        <li>Bootstrap</li>
+                        <li>Foundation</li>
+                    </ul>
+                </div>
+                <div id="boton-otros">
+                    <h3>Otros lenguajes</h3>
+                    <ul>
+                        <li>Java</li>
+                        <li>J2EE</li>
+                        <li>SQL</li>
+                        <li>PL-SQL</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="column inicial">
+                <p><strong>Graduado en Ingenieria Técnica de Sistemas</strong></p>
+                <p class="parrafoLogo"><img src="img/logo-ual.jpg" class="logo"> 2007-2010 / 2011-2013  Universidad de Almería</p>
+                <p class="parrafoLogo"><img src="img/logo-wroclaw.png" class="logo"> 2010-2011 Universidad Tecnológica de Wroclaw, Polonia</p>
+                <p><strong>Experiencia laboral</strong></p>
+                <p class="parrafoLogo"><img src="img/logo-ibm.png" class="logo">Programa de prácticas en IBM Bruselas, Belgica. Desarrollo de un proyecto interno para el departamento de software de Benelux.</p>
+                <p class="parrafoLogo"><img src="img/logo-edps.png" class="logo">Programa de practicas en la Comisión Europa – Oficina del Supervisor Europeo de Protección de Datos Trabajo con el área de normativa de IT.</p>
+                <p class="parrafoLogo"><img src="img/logo-ayuntamiento.png" class="logo">Analista y diseñador de software – Ayuntamiento de El Ejido. Diseño y programación de soluciones para dispositivos móviles.</p>
+                <p><u>Pase el ratón por la lista de la izquierda para una información mas detallada.</u></p>
+            </div>
+            <div class="column hidden web">
+                <h3>Tecnologias Web</h3>
+                <p>A pesar de haber trabajado en distintos campos, mi foco principal desde que terminé mis estudios ha sido el desarrollo web.</p>
+                <p>Mi primer proyecto importante fue durante mis prácticas en el departamento de venta de software de IBM en Belgica, para el software de oficina Lotus Notes. Creamos un portal con la tecnología de uso privado de IBM: xPages, que utiliza estandares web (HTML + CSS) para la interfaz de usuario y el framework de Javascript Dojo Toolkit para la lógica interna.</p>
+                <p>Mas recientemente, he trabajado como analista y desarrollador de aplicaciones hibridas en el ayuntamiento de El Ejido (Almería,España). Usando el framework Ionic, desarrollé varias aplicaciones para el uso interno de la administración y para los ciudadanos del municipio. Todos los proyectos fueron creados para funcionar en distintas plataformas (Web, Android, iOS), y constaban de una aplicación creada con Ionic (Angular2) y sus respectivas APIs REST en PHP.</p>
+                <p></p>
+            </div>
+            <div class="column hidden frameworks">
+                <h3>Frameworks y herramientas</h3>
+                <p>blablalbalblablalbalblalblabblablalbalblab</p>
+            </div>
+            <div class="column hidden otros">
+                <h3>Otros</h3>
+                <p>blablalbalblablalbalblalblabblablalbalblab</p>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="seccion3" class="section section-dark">
+        <a href="#seccion4"><div class="botonBajar bajarBlanco"></div></a> 
+        <a href="#seccion2"><div class="botonSubir subirBlanco"></div></a> 
+        <h2>Personal</h2>
+        <div class="row">
+            <div class="column">
+                <h3>Proyectos</h3>
+                <p>En construcción</p>
+            </div>
+            <div class="column">
+                <h3>Sobre mí</h3>
+                <p>Aquí un parrafo largo explicando cosas sobre mi.</p>
+                <h3>Idiomas</h3>
+                <p>Aquí un parrafo largo explicando cosas sobre mi.</p>
+                <h3>Hobbits (jeje)</h3>
+                <p>Aquí un parrafo largo explicando cosas sobre mi.</p>
+            </div>
+        </div>
+    </section>
+    <!--
+    <div class="pimg2">
+        <div class="ptext">
+            <span class="border trans">Texto en imagen dos</span>
+        </div>
+    </div>
+
+
+    
+    <div class="pimg3">
+        <div class="ptext">
+            <span class="border trans">Texto en imagen tres</span>
+        </div> 
+    </div>
+
+    <section class="section section-light">
+        <h2>Tercera sección</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nemo consequuntur cupiditate magnam autem quam explicabo doloremque modi assumenda! Animi amet sapiente, voluptatibus enim nobis veniam quo commodi! Facilis vero repellendus molestias beatae error minima aliquam tempora perspiciatis, dignissimos voluptatibus suscipit laboriosam distinctio et, odio corrupti omnis officia sint aperiam quaerat tempore. Libero fugit dolore quibusdam nulla cum labore voluptatum magni esse quo, error omnis pariatur beatae odit qui.</p>
+    </section>-->
+
+    <div id="seccion4" class="pimg2">
+        <div class="ptext">
+            <span class="border">
+                Contacto
+            </span>
+        </div>
+    </div>
+
+</body>
+
+</html>

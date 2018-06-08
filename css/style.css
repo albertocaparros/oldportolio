@@ -1,0 +1,215 @@
+/* Core styles */
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body, html{
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+a{
+    text-decoration: none;
+}
+.pimg1, .pimg2, .pimg3{
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    background-attachment: fixed;
+}
+
+.pimg1{
+    background-image: url("/img/primera.jpg");
+    min-height: 100vh;
+}
+
+.pimg2{
+    background-image: url("/img/segunda.jpg");
+    min-height: 100vh;
+}
+
+#seccion1{
+    position: relative;
+}
+
+#seccion2{
+    position: relative;
+}
+
+#seccion3{
+    position: relative;
+}
+
+.section{
+    text-align: center;
+    padding: 0px 80px 0px 80px;
+    
+}
+.section h2{
+    padding-top: 50px;
+}
+
+.section-light{
+    background-color: #f8fdff;
+    color: #330000;
+    height: 100vh;
+    overflow: content;
+    margin: 0;
+}
+
+.section-dark{
+    background-color: #282e34;
+    color: #ddd;
+    height: 100vh;
+    overflow: content;
+    margin: 0;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border{
+    background-color: #111;
+    font-size: 35px;
+    color: aliceblue;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;   
+    border-radius: 10px 10px 10px 10px;
+    
+    position: relative;
+    animation: heading;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes heading{
+    0%{
+        top: -500px;
+    }
+    
+    100%{
+        top: 0px;
+    } 
+}
+
+.border2{
+    background-color: #111;
+    font-size: 16px;
+    color: aliceblue;
+    text-shadow: none;
+    padding: 20px;
+    text-transform: none;
+    text-align: center;
+    letter-spacing: 5px;    
+    border-radius: 0 0 10px 10px;
+    
+    position: relative;
+    animation-name: content;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content{
+    0%{
+        left: -1000px;
+    }
+    
+    100%{
+        left: 0;
+    }
+}
+
+.ptext .trans{
+    background-color: transparent;
+}
+
+.row {
+    display: flex;
+}
+
+.column {
+    flex: 50%;
+}
+
+.column ul{
+    padding-left: 0;
+    list-style-type: none; 
+}
+
+.botonBajar{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-image: url("/img/arrow-down.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.botonSubir{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-image: url("/img/arrow-up.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.subirBlanco{
+    background-image: url("/img/arrow-up-white.png");
+}
+
+.bajarBlanco{
+    background-image: url("/img/arrow-down-white.png");
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+    margin-left: 5%;
+}
+
+.parrafoLogo{
+    text-align: center;
+  display: flex;
+  align-items: center;
+    align-content: center;
+  padding: 5px;
+  padding-left: 35px;
+}
+
+.hidden{
+    display: none;
+}
+
+#boton-web:hover, #boton-frameworks:hover, #boton-otros:hover{
+    background-color: aliceblue;
+}
+@media(max-width:568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
+
+
+
