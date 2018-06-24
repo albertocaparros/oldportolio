@@ -1,61 +1,67 @@
 /* Core styles */
+
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
-body, html{
+body,
+html {
     height: 100%;
     margin: 0;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.8em;
     color: #666;
 }
 
-a{
+a {
     text-decoration: none;
 }
-.pimg1, .pimg2, .pimg3{
+
+.pimg1,
+.pimg2,
+.pimg3 {
     position: relative;
     opacity: 0.70;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    
+
     background-attachment: fixed;
 }
 
-.pimg1{
+.pimg1 {
     background-image: url("/img/primera.jpg");
     min-height: 100vh;
 }
 
-.pimg2{
-    background-image: url("/img/segunda.jpg");
+.pimg2 {
+    background-image: url("/img/thomas-lefebvre-3950-unsplash.jpg");
     min-height: 100vh;
 }
 
-#seccion1{
+#seccion1 {
     position: relative;
 }
 
-#seccion2{
+#seccion2 {
     position: relative;
 }
 
-#seccion3{
+#seccion3 {
     position: relative;
 }
 
-.section{
+.section {
     text-align: center;
     padding: 0px 80px 0px 80px;
-    
+
 }
-.section h2{
+
+.section h2 {
     padding-top: 50px;
 }
 
-.section-light{
+.section-light {
     background-color: #f8fdff;
     color: #330000;
     height: 100vh;
@@ -63,7 +69,7 @@ a{
     margin: 0;
 }
 
-.section-dark{
+.section-dark {
     background-color: #282e34;
     color: #ddd;
     height: 100vh;
@@ -71,43 +77,106 @@ a{
     margin: 0;
 }
 
-.ptext{
+
+.foto img {
+    position: relative;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    padding-bottom: 23px;
+    background-attachment: fixed;
+    background-position: right;
+
+    animation: foto 1.5s ease-out, foto2 2s ease-out 4s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes foto {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes foto2 {
+    0% {
+        left: 0px;
+    }
+
+    100% {
+        left: -175px;
+    }
+}
+
+.ptext {
     position: absolute;
-    top: 50%;
+    top: 10vh;
     width: 100%;
     text-align: center;
     color: black;
-    font-size: 27px;
+    font-size: 1.2rem;
     letter-spacing: 8px;
     text-transform: uppercase;
 }
 
-.ptext .border{
+.intro {
+    animation: intro 2s ease-out 4s;
+    animation-fill-mode: forwards;
+    padding-top: 25px;
+}
+
+@keyframes intro {
+    0% {
+        background-color: none;
+    }
+
+    100% {
+        background-color: #111;
+    }
+}
+
+.ptext .border {
     background-color: #111;
     font-size: 35px;
     color: aliceblue;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    padding: 20px;   
+    padding: 20px;
     border-radius: 10px 10px 10px 10px;
-    
+
     position: relative;
-    animation: heading;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
+    animation: heading 1.5s ease-out, heading2 2s ease-out 4s;
     animation-fill-mode: forwards;
 }
 
-@keyframes heading{
-    0%{
+@keyframes heading {
+    0% {
         top: -500px;
     }
-    
-    100%{
+
+    100% {
         top: 0px;
-    } 
+    }
 }
 
-.border2{
+@keyframes heading2 {
+    0% {
+        top: 0px;
+        left: 0px;
+        background-color: #111;
+    }
+
+    100% {
+        top: -80px;
+        left: 190px;
+        background-color: none;
+    }
+}
+
+.border2 {
     background-color: #111;
     font-size: 16px;
     color: aliceblue;
@@ -115,27 +184,79 @@ a{
     padding: 20px;
     text-transform: none;
     text-align: center;
-    letter-spacing: 5px;    
+    letter-spacing: 5px;
     border-radius: 0 0 10px 10px;
-    
+
     position: relative;
-    animation-name: content;
-    animation-duration: 1.5s;
-    animation-timing-function: ease-out;
+    animation: content 1.5s ease-out, content2 2s ease-out 4s;
     animation-fill-mode: forwards;
+
 }
 
-@keyframes content{
-    0%{
+@keyframes content {
+    0% {
         left: -1000px;
     }
-    
-    100%{
+
+    100% {
         left: 0;
     }
 }
 
-.ptext .trans{
+@keyframes content2 {
+    0% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.border3 {
+    visibility: hidden;
+    font-size: 0.8em;
+    color: aliceblue;
+    text-shadow: none;
+    padding: 20px;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 5px;
+    position: relative;
+    margin-left: auto;
+    padding-top: 0;
+
+    animation: content3 2s ease-out 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes content3 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: 0px;
+    }
+
+    100% {
+        opacity: 100;
+        visibility: visible;
+        top: -75px;
+    }
+}
+
+.border4 {
+    font-size: 25px;
+    color: #f8fdff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #f8fdff;
+    position: relative;
+    display: inline-block;
+}
+
+.ptext .trans {
     background-color: transparent;
 }
 
@@ -145,14 +266,25 @@ a{
 
 .column {
     flex: 50%;
+    display: flex;
+    flex-direction: column;
 }
 
-.column ul{
+.column ul {
     padding-left: 0;
-    list-style-type: none; 
+    list-style-type: none;
 }
 
-.botonBajar{
+.column div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    vertical-align:super;
+}
+
+
+.botonBajar {
     height: 40px;
     width: 40px;
     position: absolute;
@@ -161,9 +293,10 @@ a{
     background-image: url("/img/arrow-down.png");
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: 1000;
 }
 
-.botonSubir{
+.botonSubir {
     height: 40px;
     width: 40px;
     position: absolute;
@@ -174,42 +307,124 @@ a{
     background-size: contain;
 }
 
-.subirBlanco{
+.subirBlanco {
     background-image: url("/img/arrow-up-white.png");
 }
 
-.bajarBlanco{
+.bajarBlanco {
     background-image: url("/img/arrow-down-white.png");
 }
 
-.logo{
+.logo {
     height: 50px;
-    width: 50px;
+    width: auto;
     margin-right: 10px;
     margin-left: 5%;
 }
 
-.parrafoLogo{
-    text-align: center;
-  display: flex;
-  align-items: center;
-    align-content: center;
-  padding: 5px;
-  padding-left: 35px;
+.logoTec{
+    height: 80px;
+    width: auto;
+    margin-right: 10px;
+    margin-left: 5%;
 }
 
-.hidden{
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+
+
+.parrafoLogo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    padding-left: 35px;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.ptext5 {
+    position: absolute;
+    top: 25vh;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ptext5 .border5 {
+    background-color: #111;
+    font-size: 35px;
+    color: aliceblue;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 15px;
+}
+
+.ptext5 .border6{
+    font-size: 0.8em;
+    color: aliceblue;
+    text-shadow: none;
+    padding: 20px;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 5px;
+    position: relative;
+    margin-left: auto;
+    padding: 25px;
+    display: inline-block;
+    background-color: rgba(0,0,0,0.8);
+    margin-top: 25px;
+}
+
+.ptext5 .border6 a:link{
+    text-decoration: none; 
+    color: aliceblue;
+}
+
+.ptext5 .border6 a:visited{
+    text-decoration: none; 
+    color:mediumpurple;
+}
+
+.hidden {
     display: none;
 }
 
-#boton-web:hover, #boton-frameworks:hover, #boton-otros:hover{
+.orb{
+    width: 25px;
+    height: auto;
+    margin-right: 5px;
+}
+
+#boton-web:hover,
+#boton-frameworks:hover,
+#boton-otros:hover {
     background-color: aliceblue;
 }
-@media(max-width:568px){
-    .pimg1, .pimg2, .pimg3{
+
+@media(max-width:568px) {
+    .pimg1,
+    .pimg2,
+    .pimg3 {
         background-attachment: scroll;
     }
 }
-
-
-

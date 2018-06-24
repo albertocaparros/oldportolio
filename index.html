@@ -7,84 +7,15 @@
     <title>Alberto Caparrós</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script>
-    // Document ready shorthand statement
-    $(function() {
-// Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-    
-    return false;
-  });
-
-
-    });
-
-$(document).ready(function(){
-
-    $('#boton-web').mouseenter(function(){
-        div = $('div.inicial');
-        divMostrar = $("div.web");
-
-        div.hide();
-        divMostrar.show(50);
-    }).mouseleave(function(){
-        div.show(50);
-        divMostrar.hide();
-    });
-    
-    $('#boton-frameworks').mouseenter(function(){
-        div = $('div.inicial');
-        divMostrar = $("div.frameworks");
-
-        div.hide();
-        divMostrar.show(50);
-    }).mouseleave(function(){
-        div.show(50);
-        divMostrar.hide();
-    });
-
-});
+<script src="js/scripts.js">
 </script>
 
 </head>
 
 <body>
-    <div id="seccion1" class="pimg1">
-        <a href="#seccion2"><div class="botonBajar"></div></a>
-        <div class="ptext" id="showcase">
+    <div id="seccion1" class="pimg1 scroll">
+        <div class="ptext intro" id="showcase">   
+            <div class="foto"><img src="img/yo3.jpg"s></div>
             <span class="border">
                 Alberto Caparrós
             </span>
@@ -93,90 +24,94 @@ $(document).ready(function(){
             <span class="border2">
                 Desarrollo de software
             </span>
+            <br>
+            <span class="border3">
+                Desarrollador de software, aplicaciones web y moviles.
+                <br>
+                Me gusta vivir experiencias diferentes en paises diferentes.
+                <br>
+                Actualmente en Tokyo disfrutando de una nueva cultura y 
+                <br>
+                conociendo el mundo del desarrollo de software en este pais.
+                <br>
+                Continua hacia abajo para ver mas información sobre mi o pulsa para contactar.
+                <br><br>
+                <span class="border4">Contacto</span>
+            </span>
+            <br>
+            <br>
         </div>
+        <a href="#seccion2"><div class="botonBajar bajarBlanco"></div></a>
     </div>
 
-    <section id="seccion2" class="section section-light">
+    <section id="seccion2" class="section section-light scroll">
         <a href="#seccion3"><div class="botonBajar"></div></a>
         <a href="#seccion1"><div class="botonSubir"></div></a> 
 
         <h2>Habilidades</h2>
         <div class="row">
             <div class="column">
-                <div id="boton-web">
+                <div>
                     <h3>Tecnologias Web</h3>
-                    <ul>
-                        <li>HTML5</li>
-                        <li>CSS3</li>
-                        <li>JavaScript</li>
-                        <li>Angular</li>
-                        <li>JSP</li>
+                    <ul class="flex-container">
+                        <li><img class="logoTec" src="img/512px-HTML5_logo_and_wordmark.svg.png"></li>
+                        <li><img class="logoTec" src="img/CSS3_logo_and_wordmark.svg.png"></li>
+                        <li><img class="logoTec" src="img/600px-Unofficial_JavaScript_logo_2.svg.png"></li>
+                        <li><img class="logoTec" src="img/angular.png"></li>
+                        <li><img class="logoTec" src="img/200px-PHP-logo.svg.png"></li>
                     </ul>
                 </div>
                 <div id="boton-frameworks">
                     <h3>Frameworks y herramientas</h3>
-                    <ul>
-                        <li>jQuery</li>
-                        <li>Ionic</li>
-                        <li>Bootstrap</li>
-                        <li>Foundation</li>
+                    <ul class="flex-container">
+                        <li><img class="logoTec" src="img/jquerylogo.png"></li>
+                        <li><img class="logoTec" src="img/ionic-logo-portrait.png"></li>
+                        <li><img class="logoTec" src="img/bootstrap-logo.png"></li>
+                        <li><img class="logoTec" src="img/zurbfoundation.jpg"></li>
                     </ul>
                 </div>
                 <div id="boton-otros">
                     <h3>Otros lenguajes</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>J2EE</li>
-                        <li>SQL</li>
-                        <li>PL-SQL</li>
+                    <ul class="flex-container">
+                        <li><img class="logoTec" src="img/javalogo.png"></li>
+                        <li><img class="logoTec" src="img/java_ee_logo_vert_v2.png"></li>
+                        <li><img class="logoTec" src="img/sql-logo.png"></li>
                     </ul>
                 </div>
             </div>
-            <div class="column inicial">
-                <p><strong>Graduado en Ingenieria Técnica de Sistemas</strong></p>
-                <p class="parrafoLogo"><img src="img/logo-ual.jpg" class="logo"> 2007-2010 / 2011-2013  Universidad de Almería</p>
-                <p class="parrafoLogo"><img src="img/logo-wroclaw.png" class="logo"> 2010-2011 Universidad Tecnológica de Wroclaw, Polonia</p>
-                <p><strong>Experiencia laboral</strong></p>
+            <div class="column">
+                <div>
+                    <h3>Graduado en Ingenieria Técnica de Sistemas</h3>
+                    <p class="parrafoLogo"><img src="img/logo-ual.jpg" class="logo"> 2007-2010 / 2011-2013  Universidad de Almería</p>
+                    <p class="parrafoLogo"><img src="img/logo-wroclaw.png" class="logo"> 2010-2011 Universidad Tecnológica de Wroclaw, Polonia</p>
+                </div>
+                <div>
+                <h3>Experiencia laboral</h3>
                 <p class="parrafoLogo"><img src="img/logo-ibm.png" class="logo">Programa de prácticas en IBM Bruselas, Belgica. Desarrollo de un proyecto interno para el departamento de software de Benelux.</p>
                 <p class="parrafoLogo"><img src="img/logo-edps.png" class="logo">Programa de practicas en la Comisión Europa – Oficina del Supervisor Europeo de Protección de Datos Trabajo con el área de normativa de IT.</p>
                 <p class="parrafoLogo"><img src="img/logo-ayuntamiento.png" class="logo">Analista y diseñador de software – Ayuntamiento de El Ejido. Diseño y programación de soluciones para dispositivos móviles.</p>
-                <p><u>Pase el ratón por la lista de la izquierda para una información mas detallada.</u></p>
-            </div>
-            <div class="column hidden web">
-                <h3>Tecnologias Web</h3>
-                <p>A pesar de haber trabajado en distintos campos, mi foco principal desde que terminé mis estudios ha sido el desarrollo web.</p>
-                <p>Mi primer proyecto importante fue durante mis prácticas en el departamento de venta de software de IBM en Belgica, para el software de oficina Lotus Notes. Creamos un portal con la tecnología de uso privado de IBM: xPages, que utiliza estandares web (HTML + CSS) para la interfaz de usuario y el framework de Javascript Dojo Toolkit para la lógica interna.</p>
-                <p>Mas recientemente, he trabajado como analista y desarrollador de aplicaciones hibridas en el ayuntamiento de El Ejido (Almería,España). Usando el framework Ionic, desarrollé varias aplicaciones para el uso interno de la administración y para los ciudadanos del municipio. Todos los proyectos fueron creados para funcionar en distintas plataformas (Web, Android, iOS), y constaban de una aplicación creada con Ionic (Angular2) y sus respectivas APIs REST en PHP.</p>
-                <p></p>
-            </div>
-            <div class="column hidden frameworks">
-                <h3>Frameworks y herramientas</h3>
-                <p>blablalbalblablalbalblalblabblablalbalblab</p>
-            </div>
-            <div class="column hidden otros">
-                <h3>Otros</h3>
-                <p>blablalbalblablalbalblalblabblablalbalblab</p>
+                </div>
             </div>
         </div>
 
     </section>
 
-    <section id="seccion3" class="section section-dark">
+    <section id="seccion3" class="section section-dark scroll">
         <a href="#seccion4"><div class="botonBajar bajarBlanco"></div></a> 
         <a href="#seccion2"><div class="botonSubir subirBlanco"></div></a> 
         <h2>Personal</h2>
         <div class="row">
             <div class="column">
                 <h3>Proyectos</h3>
-                <p>En construcción</p>
+                <p>Ya que todos mis proyectos importantes han sido para uso privado no puedo compartir su codigo. Actualmente estoy en proceso de crear algunos proyectos propios, espero tener cosas importantes que compartir pronto!</p>
             </div>
             <div class="column">
-                <h3>Sobre mí</h3>
-                <p>Aquí un parrafo largo explicando cosas sobre mi.</p>
                 <h3>Idiomas</h3>
-                <p>Aquí un parrafo largo explicando cosas sobre mi.</p>
-                <h3>Hobbits (jeje)</h3>
-                <p>Aquí un parrafo largo explicando cosas sobre mi.</p>
+                <p><b><img src="img/Spain-orb.png" class="orb"> Español:</b> Nativo</p>
+                <p><b><img src="img/Flag_of_the_United_Kingdom.svg.png" class="orb">Ingles:</b> Fluido. <br>Certificado de inglés avanzado por la Universidad de Cambridge (C2). TOEFL iBT Test.
+                </p>
+                <p><b><img src="img/Flag_of_France.svg.png" class="orb">Frances:</b> Básico.</p>
+                <p><b><img src="img/Flag_of_Japan.svg.png" class="orb">Japones:</b> Principiante!</p>
             </div>
         </div>
     </section>
@@ -200,11 +135,21 @@ $(document).ready(function(){
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nemo consequuntur cupiditate magnam autem quam explicabo doloremque modi assumenda! Animi amet sapiente, voluptatibus enim nobis veniam quo commodi! Facilis vero repellendus molestias beatae error minima aliquam tempora perspiciatis, dignissimos voluptatibus suscipit laboriosam distinctio et, odio corrupti omnis officia sint aperiam quaerat tempore. Libero fugit dolore quibusdam nulla cum labore voluptatum magni esse quo, error omnis pariatur beatae odit qui.</p>
     </section>-->
 
-    <div id="seccion4" class="pimg2">
-        <div class="ptext">
-            <span class="border">
+    <div id="seccion4" class="pimg2 scroll">
+        <a href="#seccion3"><div class="botonSubir subirBlanco"></div></a> 
+        <div class="ptext5">
+            <span class="border5">
                 Contacto
             </span>
+            <br>
+            <span class="border6">
+                E-mail: <a href="mailto:albertocaparrostrigo@gmail.com" target="_blank">albertocaparrostrigo@gmail.com</a>
+                <br>
+                                Linkedin: 
+                <a href="https://www.linkedin.com/in/albertocaparros
+                    " target="_blank">/albertocaparros</a>
+            </span>            
+            <br>
         </div>
     </div>
 
