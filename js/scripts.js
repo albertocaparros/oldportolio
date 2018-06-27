@@ -108,6 +108,7 @@ $(function () {
                     }, 1000);
                 }
             }
+            return false;
         });
 
     })();
@@ -125,6 +126,7 @@ $(function () {
             
         }
         
+        return false;
     });
 }); // FIN JS
 
