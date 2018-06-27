@@ -17,6 +17,42 @@ a {
     text-decoration: none;
 }
 
+.idioma{
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 5000;
+}
+
+.idioma:hover{
+
+    cursor: pointer;
+}
+
+.idioma img{
+    height: 2.5em;
+    width: auto;
+}
+
+.idioma img:hover{
+    height: 3em;
+    background-color: rgba(255,255,255,0.5);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    border-radius: 30%;
+}
+
+
+.spanish{
+    display: none;
+}
+
+.english{
+    display: block;
+}
 .pimg1,
 .pimg2,
 .pimg3 {
@@ -39,15 +75,15 @@ a {
     min-height: 100vh;
 }
 
-#seccion1 {
+#seccion1, #seccion1EN{
     position: relative;
 }
 
-#seccion2 {
+#seccion2, #seccion2EN {
     position: relative;
 }
 
-#seccion3 {
+#seccion3, #seccion3EN {
     position: relative;
 }
 
@@ -412,6 +448,13 @@ a {
 .orb{
     width: 25px;
     height: auto;
+    margin-right: 5px;
+}
+
+#ldicon{
+    width: 25px;
+    height: auto;
+    vertical-align: top;
     margin-right: 5px;
 }
 
