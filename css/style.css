@@ -293,10 +293,10 @@ a {
 }
 
 .border4 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #f8fdff;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    padding: 12px;
+    padding: 8px;
     border-radius: 10px 10px 10px 10px;
     border: 1px solid #f8fdff;
     position: relative;
@@ -524,9 +524,10 @@ a {
     }
 
     .border3 {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
         padding: 0px;
         letter-spacing: 0.1rem;
+        line-height: none;
 
         animation: content3 2s ease-out 4s;
         animation-fill-mode: forwards;
@@ -583,7 +584,10 @@ a {
         padding: 5px;
     }
 
-
+    .parrafoLogo{
+        margin: 0 5px 0 5px ;
+    }
+    
     .logoTec {
         height: 7vw;
         width: auto;
@@ -604,7 +608,12 @@ a {
     }
     
     .columnLarga2 p{
-        margin: 5px;
+        margin: 0 7px 0 7px;
+        padding: 0px;
+    }
+    
+    .columnLarga2 h3{
+        margin-bottom: 5px;
     }
 
     @keyframes content3 {
@@ -617,7 +626,7 @@ a {
         100% {
             opacity: 100;
             visibility: visible;
-            top: -2.5rem;
+            top: -3.5rem;
         }
     }
 }
