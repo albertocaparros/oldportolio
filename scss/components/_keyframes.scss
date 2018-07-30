@@ -1,0 +1,93 @@
+// ======================================
+//  Keyframes animations
+// ======================================
+
+@keyframes intro {
+    0% {
+        background-color: none;
+    }
+
+    100% {
+        background-color: #111;
+    }
+}
+
+@keyframes heading {
+    0% {
+        top: -500px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes heading2 {
+    0% {
+        top: 0px;
+        left: 0px;
+        background-color: transparent;
+    }
+
+    100% {
+        top: -80px;
+        left: 190px;
+        background-color: transparent;
+    }
+}
+
+@keyframes content {
+    0% {
+        left: -1000px;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes content2 {
+    0% {
+        opacity: 100;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes content3 {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        top: 0px;
+    }
+
+    100% {
+        opacity: 100;
+        visibility: visible;
+        top: -6.5rem;
+    }
+}
+
+@keyframes foto {
+    0% {
+        left: 500px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes foto2 {
+    0% {
+        left: 0px;
+        top: 0px;
+    }
+
+    100% {
+        left: -175px;
+        top: 10px;
+    }
+}

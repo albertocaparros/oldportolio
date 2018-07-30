@@ -1,0 +1,154 @@
+// ======================================
+//  Base Styles
+// ======================================
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.8rem;
+    color: #666;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Core styles */
+
+.ptext .border {
+    background-color: #111;
+    font-size: 35px;
+    color: aliceblue;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+
+    position: relative;
+    animation: heading 1.5s ease-out, heading2 2s ease-out 4s;
+    animation-fill-mode: forwards;
+    
+    @media screen and (max-width: $movil) {
+        font-size: 1.2rem;
+        animation: heading 1.5s ease-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+.border2 {
+    background-color: #111;
+    font-size: 16px;
+    color: aliceblue;
+    text-shadow: none;
+    padding: 20px;
+    text-transform: none;
+    text-align: center;
+    letter-spacing: 5px;
+    border-radius: 0 0 10px 10px;
+
+    position: relative;
+    animation: content 1.5s ease-out, content2 2s ease-out 4s;
+    animation-fill-mode: forwards;
+    
+    @media screen and (max-width: $movil) {
+        font-size: 1rem;
+        top: 0px;
+    }
+}
+
+.border3 {
+    visibility: hidden;
+    font-size: 0.8rem;
+    color: aliceblue;
+    text-shadow: none;
+    padding: 20px;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 5px;
+    position: relative;
+    margin-left: auto;
+    line-height: normal;
+
+    animation: content3 2s ease-out 4s;
+    animation-fill-mode: forwards;
+    
+    @media screen and (max-width: $movil) {
+        font-size: 0.5rem;
+        padding: 0px;
+        letter-spacing: 0.1rem;
+        line-height: none;
+
+        animation: content3 2s ease-out 4s;
+        animation-fill-mode: forwards;
+    }
+}
+
+.parrafoLogo {
+    text-align: center;
+    white-space: inherit;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+    padding: 5px;
+    padding-left: 35px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    justify-content: space-evenly;
+    height: inherit;
+    line-height: normal;
+    
+    @media screen and (max-width: $movil){
+        margin: 0 5px 0 5px ;
+    }
+}
+
+.ptext5 {
+    position: absolute;
+    top: 25vh;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 1.2rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ptext5 .border5 {
+    background-color: #111;
+    font-size: 35px;
+    color: aliceblue;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 20px;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 15px;
+}
+
+.ptext5 .border6 {
+    font-size: 0.8rem;
+    color: aliceblue;
+    text-shadow: none;
+    padding: 20px;
+    text-transform: none;
+    text-align: left;
+    letter-spacing: 5px;
+    position: relative;
+    margin-left: auto;
+    padding: 25px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin-top: 25px;
+}
+
+.ptext5 .border6 a:link {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.ptext5 .border6 a:visited {
+    text-decoration: none;
+    color: mediumpurple;
+}

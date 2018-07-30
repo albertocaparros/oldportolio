@@ -1,0 +1,101 @@
+// ======================================
+//  Button Styles
+// ======================================
+
+.idioma {
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    z-index: 5000;
+}
+
+.idioma:hover {
+    cursor: pointer;
+}
+
+.idioma img {
+    height: 2.5rem;
+    width: auto;
+}
+
+.idioma img:hover {
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    border-radius: 15%;
+}
+
+
+.botonBajar {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    background-image: url("/img/arrow-down.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 1000;
+    
+    @media screen and (max-width: $movil) {
+        height: 8vw;
+        width: 8vw;
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+
+}
+
+.botonSubir {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background-image: url("/img/arrow-up.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (max-width: $movil) {
+        height: 8vw;
+        width: 8vw;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+}
+
+.subirBlanco {
+    background-image: url("/img/arrow-up-white.png");
+}
+
+.bajarBlanco {
+    background-image: url("/img/arrow-down-white.png");
+}
+
+.border4 {
+    font-size: 1.2rem;
+    color: #f8fdff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    padding: 8px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid #f8fdff;
+    position: relative;
+    display: inherit;
+}
+
+.border4:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: 1.55rem;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+#boton-web:hover,
+#boton-frameworks:hover,
+#boton-otros:hover {
+    background-color: aliceblue;
+}

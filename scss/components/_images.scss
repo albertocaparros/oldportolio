@@ -1,0 +1,35 @@
+// ======================================
+//  Image Styles
+// ======================================
+
+.foto img {
+    position: relative;
+
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    padding-bottom: 23px;
+    background-attachment: fixed;
+    background-position: right;
+    animation: foto 1.5s ease-out, foto2 2s ease-out 4s;
+    animation-fill-mode: forwards;
+    
+    @media screen and (max-width: $movil) {
+        height: 50vw;
+        width: 50vw;
+        animation: foto 1.5s ease-out;
+        animation-fill-mode: forwards;
+        top: 15px;
+    }
+}
+
+
+.pimg1 {
+    background-image: url("/img/primera.jpg");
+    min-height: 100vh;
+}
+
+.pimg2 {
+    background-image: url("/img/thomas-lefebvre-3950-unsplash.jpg");
+    min-height: 100vh;
+}
