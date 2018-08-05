@@ -1,4 +1,3 @@
 "# albertocaparros.github.io" 
 
-
-Project under construction!
+WORK IN PROGRESS!!!!
