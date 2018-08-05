@@ -3,6 +3,8 @@
 
 // Document ready shorthand statement
 $(function () {
+
+    
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -23,7 +25,7 @@ $(function () {
                     event.preventDefault();
                     $('html, body').animate({
                         scrollTop: target.offset().top
-                    }, 1000, function () {
+                    }, 700, function () {
                         // Callback after animation
                         // Must change focus!
                         var $target = $(target);
@@ -33,100 +35,56 @@ $(function () {
                         } else {
                             $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
                             $target.focus(); // Set focus again
-                        };
+                        }
                     });
                 }
             }
 
-            return false; 
-        });
-
-    (function () {
-        var delay = false;
-
-        var idioma = $(".spanish").css("display");
-
-        $(document).on('mousewheel DOMMouseScroll', function (event) {
-            idioma = $(".spanish").css("display");
-            
-            if (idioma == "block") {
-                event.preventDefault();
-                if (delay) return;
-
-                delay = true;
-                setTimeout(function () {
-                    delay = false
-                }, 50)
-
-                var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-
-                var a = document.getElementsByClassName('scrollES');
-                if (wd < 0) {
-                    for (var i = 0; i < a.length; i++) {
-                        var t = a[i].getClientRects()[0].top;
-                        if (t >= 40) break;
-                    }
-                } else {
-                    for (var i = a.length - 1; i >= 0; i--) {
-                        var t = a[i].getClientRects()[0].top;
-                        if (t < -20) break;
-                    }
-                }
-
-                if (i >= 0 && i < a.length) {
-                    $('html,body').animate({
-                        scrollTop: a[i].offsetTop
-                    }, 1000);
-                }
-            } else {
-                event.preventDefault();
-                if (delay) return;
-
-                delay = true;
-                setTimeout(function () {
-                    delay = false
-                }, 50)
-
-                var wd = event.originalEvent.wheelDelta || -event.originalEvent.detail;
-
-                var a = document.getElementsByClassName('scrollEN');
-                if (wd < 0) {
-                    for (var i = 0; i < a.length; i++) {
-                        var t = a[i].getClientRects()[0].top;
-                        if (t >= 40) break;
-                    }
-                } else {
-                    for (var i = a.length - 1; i >= 0; i--) {
-                        var t = a[i].getClientRects()[0].top;
-                        if (t < -20) break;
-                    }
-                }
-
-                if (i >= 0 && i < a.length) {
-                    $('html,body').animate({
-                        scrollTop: a[i].offsetTop
-                    }, 1000);
-                }
-            }
             return false;
         });
-
-    })();
     
-    $(".idioma").click(function(){
-        var idioma = $(".spanish").css("display");
-        
-        if (idioma == "block") {
-            $(".spanish").css("display","none");
-            $(".english").css("display","block");
-        }
-        else{
-            $(".spanish").css("display","block");
-            $(".english").css("display","none");
-            
-        }
-        
-        return false;
+    var language;
+    
+    $(document).ready(function(){
+        (localStorage.getItem('language') == null) ? setLanguage('en'): false;
+        $.ajax({
+            url: '/lang/' + localStorage.getItem('language') + '.json',
+            dataType: 'json',
+            async: false,
+            dataType: 'json',
+            success: function (lang) {
+                language = lang
+            }
+        });
     });
-}); // FIN JS
+    
+    $(".idioma").click(function () {
+        var actual = localStorage.getItem('language');
+        
+        if(actual == "en"){
+            localStorage.setItem('language', "es");  
+        }      
+        else{
+            localStorage.setItem('language', "en");
+            language = "en";
+        }
+        
+        $.ajax({
+            url: '/lang/' + localStorage.getItem('language') + '.json',
+            dataType: 'json',
+            async: false,
+            dataType: 'json',
+            success: function (lang) {
+                language = lang
+            }
+        });
+        
+        $.each(language, function(key,value){
+            $('#'+key).text(value);
+        })
+        
+    });
+    
 
+
+}); // FIN JS

@@ -24,6 +24,7 @@
     font-size: 1.2rem;
     letter-spacing: 8px;
     text-transform: uppercase;
+    display: inline-block;
     
     @media screen and (max-width: $movil) {
         padding: 10px;
@@ -46,11 +47,11 @@
 }
 
 .spanish {
-    display: none;
+    display: block;
 }
 
 .english {
-    display: block;
+    display: none;
 }
 
 #seccion1,

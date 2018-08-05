@@ -14,14 +14,14 @@ html {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 /* Core styles */
 
 .ptext .border {
     background-color: #111;
-    font-size: 35px;
+    font-size: 2rem;
     color: aliceblue;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 20px;
@@ -30,6 +30,8 @@ a {
     position: relative;
     animation: heading 1.5s ease-out, heading2 2s ease-out 4s;
     animation-fill-mode: forwards;
+    margin:auto;
+    width: 40vw;
     
     @media screen and (max-width: $movil) {
         font-size: 1.2rem;
@@ -40,7 +42,7 @@ a {
 
 .border2 {
     background-color: #111;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: aliceblue;
     text-shadow: none;
     padding: 20px;
@@ -48,6 +50,8 @@ a {
     text-align: center;
     letter-spacing: 5px;
     border-radius: 0 0 10px 10px;
+    margin:auto;
+    width: 30vw;
 
     position: relative;
     animation: content 1.5s ease-out, content2 2s ease-out 4s;
@@ -69,8 +73,9 @@ a {
     text-align: left;
     letter-spacing: 5px;
     position: relative;
-    margin-left: auto;
-    line-height: normal;
+    margin: auto;
+    line-height: inherit;
+    width: 60vw;
 
     animation: content3 2s ease-out 4s;
     animation-fill-mode: forwards;
@@ -89,7 +94,8 @@ a {
 .parrafoLogo {
     text-align: center;
     white-space: inherit;
-    display: inline-flex;
+    display:    inline-flex !important;
+    flex-direction: row !important;
     align-items: center;
     align-content: center;
     padding: 5px;
@@ -124,7 +130,8 @@ a {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 20px;
     border-radius: 10px 10px 10px 10px;
-    margin-bottom: 15px;
+    width: 40vw;
+    margin: auto;
 }
 
 .ptext5 .border6 {
@@ -136,11 +143,13 @@ a {
     text-align: left;
     letter-spacing: 5px;
     position: relative;
-    margin-left: auto;
     padding: 25px;
     display: inline-block;
     background-color: rgba(0, 0, 0, 0.8);
+    width: 35vw;
+    margin: auto;
     margin-top: 25px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 .ptext5 .border6 a:link {

@@ -77,19 +77,23 @@
 }
 
 .border4 {
+    visibility: hidden;
+    position: relative;
+    margin: auto;
+    width: 25vw;
     font-size: 1.2rem;
     color: #f8fdff;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     padding: 8px;
     border-radius: 10px 10px 10px 10px;
     border: 1px solid #f8fdff;
-    position: relative;
-    display: inherit;
+    
+    animation: content3 2s ease-out 4s;
+    animation-fill-mode: forwards;
 }
 
 .border4:hover {
     background-color: rgba(255, 255, 255, 0.3);
-    font-size: 1.55rem;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 

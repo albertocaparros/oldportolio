@@ -479,7 +479,7 @@ a {
 /* Core styles */
 .ptext .border {
   background-color: #111;
-  font-size: 35px;
+  font-size: 2rem;
   color: aliceblue;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   padding: 20px;
@@ -487,6 +487,8 @@ a {
   position: relative;
   animation: heading 1.5s ease-out, heading2 2s ease-out 4s;
   animation-fill-mode: forwards;
+  margin: auto;
+  width: 40vw;
 }
 @media screen and (max-width: 600px) {
   .ptext .border {
@@ -498,7 +500,7 @@ a {
 
 .border2 {
   background-color: #111;
-  font-size: 16px;
+  font-size: 1.2rem;
   color: aliceblue;
   text-shadow: none;
   padding: 20px;
@@ -506,6 +508,8 @@ a {
   text-align: center;
   letter-spacing: 5px;
   border-radius: 0 0 10px 10px;
+  margin: auto;
+  width: 30vw;
   position: relative;
   animation: content 1.5s ease-out, content2 2s ease-out 4s;
   animation-fill-mode: forwards;
@@ -527,8 +531,9 @@ a {
   text-align: left;
   letter-spacing: 5px;
   position: relative;
-  margin-left: auto;
-  line-height: normal;
+  margin: auto;
+  line-height: inherit;
+  width: 60vw;
   animation: content3 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
@@ -546,7 +551,8 @@ a {
 .parrafoLogo {
   text-align: center;
   white-space: inherit;
-  display: inline-flex;
+  display: inline-flex !important;
+  flex-direction: row !important;
   align-items: center;
   align-content: center;
   padding: 5px;
@@ -582,7 +588,8 @@ a {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   padding: 20px;
   border-radius: 10px 10px 10px 10px;
-  margin-bottom: 15px;
+  width: 40vw;
+  margin: auto;
 }
 
 .ptext5 .border6 {
@@ -594,11 +601,13 @@ a {
   text-align: left;
   letter-spacing: 5px;
   position: relative;
-  margin-left: auto;
   padding: 25px;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.8);
+  width: 35vw;
+  margin: auto;
   margin-top: 25px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 .ptext5 .border6 a:link {
@@ -632,6 +641,7 @@ a {
   font-size: 1.2rem;
   letter-spacing: 8px;
   text-transform: uppercase;
+  display: inline-block;
 }
 @media screen and (max-width: 600px) {
   .ptext {
@@ -653,11 +663,11 @@ a {
 }
 
 .spanish {
-  display: none;
+  display: block;
 }
 
 .english {
-  display: block;
+  display: none;
 }
 
 #seccion1,
@@ -886,19 +896,22 @@ a {
 }
 
 .border4 {
+  visibility: hidden;
+  position: relative;
+  margin: auto;
+  width: 25vw;
   font-size: 1.2rem;
   color: #f8fdff;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   padding: 8px;
   border-radius: 10px 10px 10px 10px;
   border: 1px solid #f8fdff;
-  position: relative;
-  display: inherit;
+  animation: content3 2s ease-out 4s;
+  animation-fill-mode: forwards;
 }
 
 .border4:hover {
   background-color: rgba(255, 255, 255, 0.3);
-  font-size: 1.55rem;
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 
@@ -948,7 +961,6 @@ a {
   border-radius: 50%;
   height: 200px;
   width: 200px;
-  padding-bottom: 23px;
   background-attachment: fixed;
   background-position: right;
   animation: foto 1.5s ease-out, foto2 2s ease-out 4s;
@@ -1027,7 +1039,7 @@ a {
   100% {
     opacity: 100;
     visibility: visible;
-    top: -6.5rem;
+    top: -150px;
   }
 }
 @keyframes foto {
