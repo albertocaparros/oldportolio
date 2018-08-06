@@ -464,7 +464,9 @@ ul, ol {
 body,
 html {
   height: 100%;
+  width: 100%;
   margin: 0;
+  padding: 0;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -488,13 +490,15 @@ a {
   animation: heading 1.5s ease-out, heading2 2s ease-out 4s;
   animation-fill-mode: forwards;
   margin: auto;
-  width: 40vw;
+  width: 55vw;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .ptext .border {
     font-size: 1.2rem;
     animation: heading 1.5s ease-out;
     animation-fill-mode: forwards;
+    border-radius: 10px 10px 0px 0px;
+    width: 80vw;
   }
 }
 
@@ -514,10 +518,11 @@ a {
   animation: content 1.5s ease-out, content2 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .border2 {
     font-size: 1rem;
     top: 0px;
+    width: 80vw;
   }
 }
 
@@ -537,13 +542,14 @@ a {
   animation: content3 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .border3 {
     font-size: 0.5rem;
-    padding: 0px;
     letter-spacing: 0.1rem;
     line-height: none;
-    animation: content3 2s ease-out 4s;
+    padding: 20px;
+    width: 85vw;
+    animation: content3movil 2s ease-out 4s;
     animation-fill-mode: forwards;
   }
 }
@@ -563,9 +569,9 @@ a {
   height: inherit;
   line-height: normal;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .parrafoLogo {
-    margin: 0 5px 0 5px;
+    margin: 15px 5px 0 5px;
   }
 }
 
@@ -591,6 +597,11 @@ a {
   width: 40vw;
   margin: auto;
 }
+@media screen and (max-width: 960px) {
+  .ptext5 .border5 {
+    width: 80vw;
+  }
+}
 
 .ptext5 .border6 {
   font-size: 0.8rem;
@@ -608,6 +619,12 @@ a {
   margin: auto;
   margin-top: 25px;
   border-radius: 10px 10px 10px 10px;
+}
+@media screen and (max-width: 960px) {
+  .ptext5 .border6 {
+    width: 80vw;
+    word-wrap: break-word;
+  }
 }
 
 .ptext5 .border6 a:link {
@@ -635,7 +652,7 @@ a {
   position: absolute;
   top: 3.5rem;
   width: 100%;
-  height: 80vh;
+  height: 73vh;
   text-align: center;
   color: black;
   font-size: 1.2rem;
@@ -643,10 +660,9 @@ a {
   text-transform: uppercase;
   display: inline-block;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .ptext {
-    padding: 10px;
-    width: initial;
+    width: 100vw;
     height: 82vh;
   }
 }
@@ -689,7 +705,7 @@ a {
   text-align: center;
   padding: 0px 80px 0px 80px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .section {
     text-align: center;
     padding: 0px 10px 0px 10px;
@@ -723,7 +739,7 @@ a {
 .row {
   display: flex;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .row {
     display: table-row;
   }
@@ -738,7 +754,7 @@ a {
   padding: 0 5px 5px 0;
   text-align: center;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .column {
     display: flex;
     flex-direction: row;
@@ -753,7 +769,7 @@ a {
   padding-left: 0;
   list-style-type: none;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .column ul {
     padding-left: 0;
     list-style-type: none;
@@ -767,20 +783,27 @@ a {
   margin: auto;
   vertical-align: super;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .column div {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto;
+    margin-top: 15px;
     padding: 5px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .column div h3 {
+    margin: 0px auto 5px auto;
   }
 }
 
 .column p {
   padding: 5px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .column p {
     padding: 5px;
   }
@@ -798,8 +821,13 @@ a {
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
+@media screen and (max-width: 960px) {
+  .flex-container {
+    padding: 5px;
+  }
+}
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .columnLarga {
     flex-direction: column-reverse;
   }
@@ -836,10 +864,8 @@ a {
   height: 2.5rem;
   width: auto;
 }
-
 .idioma img:hover {
   height: 3rem;
-  background-color: rgba(255, 255, 255, 0.5);
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
@@ -859,10 +885,20 @@ a {
   background-size: contain;
   z-index: 1000;
 }
-@media screen and (max-width: 600px) {
+.botonBajar:hover {
+  height: 50px;
+  width: 50px;
+  right: 23px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+@media screen and (max-width: 960px) {
   .botonBajar {
-    height: 8vw;
-    width: 8vw;
+    height: 2.5rem;
+    width: 2.5rem;
     bottom: 0.5rem;
     right: 0.5rem;
   }
@@ -878,10 +914,20 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
 }
-@media screen and (max-width: 600px) {
+.botonSubir:hover {
+  height: 50px;
+  width: 50px;
+  right: 23px;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+@media screen and (max-width: 960px) {
   .botonSubir {
-    height: 8vw;
-    width: 8vw;
+    height: 2.5rem;
+    width: 2.5rem;
     top: 0.5rem;
     right: 0.5rem;
   }
@@ -909,10 +955,17 @@ a {
   animation: content3 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-
 .border4:hover {
   background-color: rgba(255, 255, 255, 0.3);
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+@media screen and (max-width: 960px) {
+  .border4 {
+    margin-top: 0px;
+    animation: content3movil 2s ease-out 4s;
+    animation-fill-mode: forwards;
+    width: 50vw;
+  }
 }
 
 #boton-web:hover,
@@ -934,7 +987,7 @@ a {
   margin-right: 10px;
   margin-left: 5%;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .logoTec {
     height: 7vw;
     width: auto;
@@ -966,10 +1019,8 @@ a {
   animation: foto 1.5s ease-out, foto2 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 960px) {
   .foto img {
-    height: 50vw;
-    width: 50vw;
     animation: foto 1.5s ease-out;
     animation-fill-mode: forwards;
     top: 15px;
@@ -1011,23 +1062,26 @@ a {
   100% {
     top: -80px;
     left: 190px;
+    font-size: 2.5rem;
     background-color: transparent;
   }
 }
 @keyframes content {
   0% {
     left: -1000px;
+    top: -5px;
   }
   100% {
     left: 0;
+    top: -10px;
   }
 }
 @keyframes content2 {
   0% {
-    opacity: 100;
+    top: 0;
   }
   100% {
-    opacity: 0;
+    top: -20px;
   }
 }
 @keyframes content3 {
@@ -1039,7 +1093,19 @@ a {
   100% {
     opacity: 100;
     visibility: visible;
-    top: -150px;
+    top: -140px;
+  }
+}
+@keyframes content3movil {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    top: 200px;
+  }
+  100% {
+    opacity: 100;
+    visibility: visible;
+    top: -45px;
   }
 }
 @keyframes foto {

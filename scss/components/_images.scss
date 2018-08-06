@@ -13,8 +13,6 @@
     animation-fill-mode: forwards;
     
     @media screen and (max-width: $movil) {
-        height: 50vw;
-        width: 50vw;
         animation: foto 1.5s ease-out;
         animation-fill-mode: forwards;
         top: 15px;

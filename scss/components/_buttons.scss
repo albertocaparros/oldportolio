@@ -16,18 +16,19 @@
 .idioma img {
     height: 2.5rem;
     width: auto;
+    
+    &:hover {
+        height: 3rem;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+        border-radius: 15%;
+    }
 }
 
-.idioma img:hover {
-    height: 3rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -ms-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-    border-radius: 15%;
-}
+
 
 
 .botonBajar {
@@ -41,13 +42,23 @@
     background-size: contain;
     z-index: 1000;
     
+    &:hover {     
+        height: 50px;
+        width: 50px;
+        right: 23px;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out; 
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+    
     @media screen and (max-width: $movil) {
-        height: 8vw;
-        width: 8vw;
+        height: 2.5rem;
+        width: 2.5rem;
         bottom: 0.5rem;
         right: 0.5rem;
     }
-
 }
 
 .botonSubir {
@@ -60,9 +71,20 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    &:hover {      
+        height: 50px;
+        width: 50px;
+        right: 23px;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out; 
+        -ms-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+    
     @media screen and (max-width: $movil) {
-        height: 8vw;
-        width: 8vw;
+        height: 2.5rem;
+        width: 2.5rem;
         top: 0.5rem;
         right: 0.5rem;
     }
@@ -90,12 +112,22 @@
     
     animation: content3 2s ease-out 4s;
     animation-fill-mode: forwards;
+    
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+    }
+
+    @media screen and (max-width: $movil) {
+        margin-top: 0px;   
+        
+        animation: content3movil 2s ease-out 4s;
+        animation-fill-mode: forwards;
+        width: 50vw;
+    }
 }
 
-.border4:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-}
+
 
 
 #boton-web:hover,
