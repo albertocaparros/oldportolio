@@ -1,8 +1,8 @@
 [
     {
         "info": "One beer please",
-        "translateHiragana": "ビール一杯下さい",
-        "translateRomaji": "Bīru ippai kudasai",
+        "translateHiragana": "ビール一を いっぱい ください",
+        "translateRomaji": "Bīru o ippai kudasai",
         "imgSrc": "food.jpg"
     }
 ]
