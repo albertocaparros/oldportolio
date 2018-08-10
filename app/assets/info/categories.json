@@ -8,15 +8,5 @@
         "name": "Shopping",
         "imgSrc": "shopping.jpg",
         "infoSrc": "shopping.json"
-    },    
-    {
-        "name": "Shopping",
-        "imgSrc": "shopping.jpg",
-        "infoSrc": "shopping.json"
-    },    
-    {
-        "name": "Food",
-        "imgSrc": "food.jpg",
-        "infoSrc": "food.json"
-    }
+    }  
 ]
