@@ -479,7 +479,14 @@ a {
 }
 
 /* Core styles */
-.ptext .border {
+@media screen and (max-width: 960px) {
+  .spanish div, .spanish section {
+    height: auto;
+    overflow: auto;
+  }
+}
+
+.ptext .titulo {
   background-color: #111;
   font-size: 2rem;
   color: aliceblue;
@@ -493,7 +500,7 @@ a {
   width: 55vw;
 }
 @media screen and (max-width: 960px) {
-  .ptext .border {
+  .ptext .titulo {
     font-size: 1.2rem;
     animation: heading 1.5s ease-out;
     animation-fill-mode: forwards;
@@ -699,6 +706,12 @@ a {
 #seccion3,
 #seccion3EN {
   position: relative;
+}
+@media screen and (max-width: 960px) {
+  #seccion3,
+#seccion3EN {
+    padding: 20px;
+  }
 }
 
 .section {
@@ -1079,9 +1092,11 @@ a {
 @keyframes content2 {
   0% {
     top: 0;
+    opacity: 0.7;
   }
   100% {
     top: -20px;
+    opacity: 0;
   }
 }
 @keyframes content3 {

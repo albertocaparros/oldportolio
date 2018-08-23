@@ -1,10 +1,10 @@
 /*jslint browser: true*/
 /*global $, location*/
-
+ 
 // Document ready shorthand statement
 $(function () {
 
-    
+
     // Select all links with hashes
     $('a[href*="#"]')
         // Remove links that don't actually link to anything
@@ -42,35 +42,49 @@ $(function () {
 
             return false;
         });
-    
+
     var language;
-    
-    $(document).ready(function(){
-        (localStorage.getItem('language') == null) ? setLanguage('en'): false;
-        $.ajax({
-            url: '/lang/' + localStorage.getItem('language') + '.json',
-            dataType: 'json',
-            async: false,
-            dataType: 'json',
-            success: function (lang) {
-                language = lang
-            }
-        });
-    });
-    
-    $(".idioma").click(function () {
-        var actual = localStorage.getItem('language');
-        
-        if(actual == "en"){
-            localStorage.setItem('language', "es");  
-        }      
+
+
+
+    if(window.localStorage.getItem('language') == null){
+        if(navigator.language.startsWith("es")){
+             window.localStorage.setItem('language', "es");
+        }
         else{
-            localStorage.setItem('language', "en");
+             window.localStorage.setItem('language', "en");
+        }
+    } 
+    
+    $.ajax({
+        url: '/lang/' + window.localStorage.getItem('language') + '.json',
+        dataType: 'json',
+        async: false,
+        dataType: 'json',
+        success: function (lang) {
+            language = lang
+        }
+    });
+
+    $.each(language, function (key, value) {
+        $('#' + key).text(value);
+    })
+
+
+    $(".idioma").click(function () {
+        var actual = window.localStorage.getItem('language');
+
+        console.log(actual);
+        
+        if (actual == "en") {
+            window.localStorage.setItem('language', "es");
+        } else {
+            window.localStorage.setItem('language', "en");
             language = "en";
         }
-        
+
         $.ajax({
-            url: '/lang/' + localStorage.getItem('language') + '.json',
+            url: '/lang/' + window.localStorage.getItem('language') + '.json',
             dataType: 'json',
             async: false,
             dataType: 'json',
@@ -78,13 +92,13 @@ $(function () {
                 language = lang
             }
         });
-        
-        $.each(language, function(key,value){
-            $('#'+key).text(value);
+
+        $.each(language, function (key, value) {
+            $('#' + key).text(value);
         })
-        
+
     });
-    
+
 
 
 }); // FIN JS

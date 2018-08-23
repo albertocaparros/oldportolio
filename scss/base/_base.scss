@@ -19,9 +19,18 @@ a {
     text-decoration: none; 
 }
 
+
 /* Core styles */
 
-.ptext .border {
+.spanish div, .spanish section{
+    
+    @media screen and (max-width: $movil) {
+        height: auto;
+        overflow: auto;
+    }
+}
+
+.ptext .titulo {
     background-color: #111;
     font-size: 2rem;
     color: aliceblue;
