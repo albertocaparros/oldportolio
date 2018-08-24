@@ -498,7 +498,6 @@ a {
   animation-fill-mode: forwards;
   margin: auto;
   width: 55vw;
-  height: 99%;
 }
 @media screen and (max-width: 768px) {
   .ptext .titulo {

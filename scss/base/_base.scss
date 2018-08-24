@@ -43,7 +43,6 @@ a {
     animation-fill-mode: forwards;
     margin:auto;
     width: 55vw;
-    height: 99%;
     
     @media screen and (max-width: $movil) {
         font-size: 1.2rem;
@@ -53,7 +52,7 @@ a {
         width: 80vw;
     }
 }
-
+ 
 .border2 {
     background-color: #111;
     font-size: 1.2rem;
