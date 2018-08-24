@@ -28,7 +28,8 @@
     
     @media screen and (max-width: $movil) {
         width: 100vw;
-        height: 82vh;
+        height: auto;
+        top:0;
     }
 }
 
@@ -41,7 +42,6 @@
 .intro {
     animation: intro 2s ease-out 4s;
     animation-fill-mode: forwards;
-    overflow: hidden;
     justify-content: center;
 }
 
@@ -53,18 +53,19 @@
     display: none;
 }
 
-#seccion1,
-#seccion1EN {
+#seccion1 {
+    position: relative;
+    
+    @media screen and (max-width: $movil) {
+        height: fit-content;
+    }
+}
+
+#seccion2{
     position: relative;
 }
 
-#seccion2,
-#seccion2EN {
-    position: relative;
-}
-
-#seccion3,
-#seccion3EN {
+#seccion3 {
     position: relative;
     
     @media screen and (max-width: $movil) {

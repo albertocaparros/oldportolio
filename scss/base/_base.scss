@@ -22,11 +22,11 @@ a {
 
 /* Core styles */
 
-.spanish div, .spanish section{
+.spanish > div, .spanish > section{
     
     @media screen and (max-width: $movil) {
         height: auto;
-        overflow: auto;
+        overflow:scroll;
     }
 }
 
@@ -43,6 +43,7 @@ a {
     animation-fill-mode: forwards;
     margin:auto;
     width: 55vw;
+    height: 99%;
     
     @media screen and (max-width: $movil) {
         font-size: 1.2rem;
@@ -99,7 +100,7 @@ a {
         letter-spacing: 0.1rem;
         line-height: none;
         padding: 20px;
-        width: 85vw;
+        width: 80vw;
         animation: content3movil 2s ease-out 4s;
         animation-fill-mode: forwards;
     }

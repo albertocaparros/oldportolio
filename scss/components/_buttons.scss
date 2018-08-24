@@ -54,10 +54,7 @@
     }
     
     @media screen and (max-width: $movil) {
-        height: 2.5rem;
-        width: 2.5rem;
-        bottom: 0.5rem;
-        right: 0.5rem;
+       display: none;
     }
 }
 
@@ -83,10 +80,7 @@
     }
     
     @media screen and (max-width: $movil) {
-        height: 2.5rem;
-        width: 2.5rem;
-        top: 0.5rem;
-        right: 0.5rem;
+       display: none;
     }
 }
 

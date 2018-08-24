@@ -479,10 +479,10 @@ a {
 }
 
 /* Core styles */
-@media screen and (max-width: 960px) {
-  .spanish div, .spanish section {
+@media screen and (max-width: 768px) {
+  .spanish > div, .spanish > section {
     height: auto;
-    overflow: auto;
+    overflow: scroll;
   }
 }
 
@@ -498,8 +498,9 @@ a {
   animation-fill-mode: forwards;
   margin: auto;
   width: 55vw;
+  height: 99%;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .ptext .titulo {
     font-size: 1.2rem;
     animation: heading 1.5s ease-out;
@@ -525,7 +526,7 @@ a {
   animation: content 1.5s ease-out, content2 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .border2 {
     font-size: 1rem;
     top: 0px;
@@ -549,13 +550,13 @@ a {
   animation: content3 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .border3 {
     font-size: 0.5rem;
     letter-spacing: 0.1rem;
     line-height: none;
     padding: 20px;
-    width: 85vw;
+    width: 80vw;
     animation: content3movil 2s ease-out 4s;
     animation-fill-mode: forwards;
   }
@@ -576,7 +577,7 @@ a {
   height: inherit;
   line-height: normal;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .parrafoLogo {
     margin: 15px 5px 0 5px;
   }
@@ -604,7 +605,7 @@ a {
   width: 40vw;
   margin: auto;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .ptext5 .border5 {
     width: 80vw;
   }
@@ -627,7 +628,7 @@ a {
   margin-top: 25px;
   border-radius: 10px 10px 10px 10px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .ptext5 .border6 {
     width: 80vw;
     word-wrap: break-word;
@@ -667,10 +668,11 @@ a {
   text-transform: uppercase;
   display: inline-block;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .ptext {
     width: 100vw;
-    height: 82vh;
+    height: auto;
+    top: 0;
   }
 }
 
@@ -681,7 +683,6 @@ a {
 .intro {
   animation: intro 2s ease-out 4s;
   animation-fill-mode: forwards;
-  overflow: hidden;
   justify-content: center;
 }
 
@@ -693,23 +694,24 @@ a {
   display: none;
 }
 
-#seccion1,
-#seccion1EN {
+#seccion1 {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #seccion1 {
+    height: fit-content;
+  }
+}
+
+#seccion2 {
   position: relative;
 }
 
-#seccion2,
-#seccion2EN {
+#seccion3 {
   position: relative;
 }
-
-#seccion3,
-#seccion3EN {
-  position: relative;
-}
-@media screen and (max-width: 960px) {
-  #seccion3,
-#seccion3EN {
+@media screen and (max-width: 768px) {
+  #seccion3 {
     padding: 20px;
   }
 }
@@ -718,7 +720,7 @@ a {
   text-align: center;
   padding: 0px 80px 0px 80px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .section {
     text-align: center;
     padding: 0px 10px 0px 10px;
@@ -752,7 +754,7 @@ a {
 .row {
   display: flex;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .row {
     display: table-row;
   }
@@ -767,7 +769,7 @@ a {
   padding: 0 5px 5px 0;
   text-align: center;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .column {
     display: flex;
     flex-direction: row;
@@ -782,7 +784,7 @@ a {
   padding-left: 0;
   list-style-type: none;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .column ul {
     padding-left: 0;
     list-style-type: none;
@@ -796,7 +798,7 @@ a {
   margin: auto;
   vertical-align: super;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .column div {
     display: flex;
     flex-direction: column;
@@ -807,7 +809,7 @@ a {
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .column div h3 {
     margin: 0px auto 5px auto;
   }
@@ -816,7 +818,7 @@ a {
 .column p {
   padding: 5px;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .column p {
     padding: 5px;
   }
@@ -834,13 +836,13 @@ a {
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .flex-container {
     padding: 5px;
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .columnLarga {
     flex-direction: column-reverse;
   }
@@ -908,12 +910,9 @@ a {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .botonBajar {
-    height: 2.5rem;
-    width: 2.5rem;
-    bottom: 0.5rem;
-    right: 0.5rem;
+    display: none;
   }
 }
 
@@ -937,12 +936,9 @@ a {
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .botonSubir {
-    height: 2.5rem;
-    width: 2.5rem;
-    top: 0.5rem;
-    right: 0.5rem;
+    display: none;
   }
 }
 
@@ -972,7 +968,7 @@ a {
   background-color: rgba(255, 255, 255, 0.3);
   text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .border4 {
     margin-top: 0px;
     animation: content3movil 2s ease-out 4s;
@@ -1000,7 +996,7 @@ a {
   margin-right: 10px;
   margin-left: 5%;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .logoTec {
     height: 7vw;
     width: auto;
@@ -1032,7 +1028,7 @@ a {
   animation: foto 1.5s ease-out, foto2 2s ease-out 4s;
   animation-fill-mode: forwards;
 }
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 768px) {
   .foto img {
     animation: foto 1.5s ease-out;
     animation-fill-mode: forwards;
@@ -1120,7 +1116,7 @@ a {
   100% {
     opacity: 100;
     visibility: visible;
-    top: -45px;
+    top: -18vh;
   }
 }
 @keyframes foto {
