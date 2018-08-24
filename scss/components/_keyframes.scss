@@ -40,23 +40,23 @@
 @keyframes content { 
     0% {
         left: -1000px;
-        top: -5px;
+        top:0px;
     }
 
     100% {
         left: 0;
-        top: -10px;
+        top:0px;
     }
 }
 
 @keyframes content2 {
     0% {
-        top:0;
+        top:0px;
         opacity:0.7;
     }
 
     100% {
-        top: -20px;
+        top: 0px;
         opacity:0;
     }
 }
@@ -79,13 +79,13 @@
     0% {
         opacity: 0;
         visibility: hidden;
-        top: 200px;
+        bottom: 0px;
     }
 
     100% {
         opacity: 100;
         visibility: visible;
-        top: -18vh;
+        bottom: 100px; 
     }
 }
 

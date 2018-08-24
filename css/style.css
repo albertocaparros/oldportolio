@@ -528,7 +528,6 @@ a {
 @media screen and (max-width: 768px) {
   .border2 {
     font-size: 1rem;
-    top: 0px;
     width: 80vw;
   }
 }
@@ -671,7 +670,6 @@ a {
   .ptext {
     width: 100vw;
     height: auto;
-    top: 0;
   }
 }
 
@@ -712,6 +710,7 @@ a {
 @media screen and (max-width: 768px) {
   #seccion3 {
     padding: 20px;
+    padding-bottom: 40px;
   }
 }
 
@@ -1036,11 +1035,18 @@ a {
 }
 
 .pimg1 {
+  position: relative;
   background-image: url("/img/primera.jpg");
   min-height: 100vh;
 }
+@media screen and (max-width: 768px) {
+  .pimg1 {
+    min-height: 100vmax;
+  }
+}
 
 .pimg2 {
+  position: relative;
   background-image: url("/img/segunda.jpg");
   min-height: 100vh;
 }
@@ -1077,20 +1083,20 @@ a {
 @keyframes content {
   0% {
     left: -1000px;
-    top: -5px;
+    top: 0px;
   }
   100% {
     left: 0;
-    top: -10px;
+    top: 0px;
   }
 }
 @keyframes content2 {
   0% {
-    top: 0;
+    top: 0px;
     opacity: 0.7;
   }
   100% {
-    top: -20px;
+    top: 0px;
     opacity: 0;
   }
 }
@@ -1110,12 +1116,12 @@ a {
   0% {
     opacity: 0;
     visibility: hidden;
-    top: 200px;
+    bottom: 0px;
   }
   100% {
     opacity: 100;
     visibility: visible;
-    top: -18vh;
+    bottom: 100px;
   }
 }
 @keyframes foto {

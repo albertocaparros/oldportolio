@@ -19,13 +19,20 @@
     }
 }
 
-
+ 
 .pimg1 {
+    position: relative;
     background-image: url("/img/primera.jpg"); 
     min-height: 100vh;
+    
+    @media screen and (max-width: $movil) {
+        min-height: 100vmax;
+    }
+    
 }
 
 .pimg2 {
+    position: relative;
     background-image: url("/img/segunda.jpg");
     min-height: 100vh;
 }
